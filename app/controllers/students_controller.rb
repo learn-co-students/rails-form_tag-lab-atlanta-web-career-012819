@@ -13,7 +13,8 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
-    redirect_to action: "show", id: @student.id
+    # redirect_to action: "show", id: @student.id
+    redirect_to @student
   end
 
 end
